@@ -46,6 +46,8 @@
           layoutName: shiftToggle,
           autoUseTouchEvents: true,
           disableButtonHold: true,
+          preventMouseDownDefault: true
+         
           
         });
       }
