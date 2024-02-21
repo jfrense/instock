@@ -43,7 +43,10 @@
         let shiftToggle = currentLayout === "default" ? "shift" : "default";
   
         this.keyboard.setOptions({
-          layoutName: shiftToggle
+          layoutName: shiftToggle,
+          autoUseTouchEvents: true,
+          disableButtonHold: true,
+          
         });
       }
     },
