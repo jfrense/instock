@@ -34,13 +34,13 @@ function onChange(input: any) {
     >
     <button type="submit">Greet</button>
 
-    <SimpleKeyboard  @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
-
+    
   </form>
 
 
 
   <p>{{ greetMsg }}</p>
 
+  <SimpleKeyboard  @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
 
 </template>
