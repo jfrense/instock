@@ -25,6 +25,9 @@
         onChange: this.onChange,
         onKeyPress: this.onKeyPress
       });
+  
+      // Add touch event listener to simulate mouse clicks
+      this.addTouchEventListeners();
     },
     methods: {
       onChange(input) {
@@ -32,30 +35,45 @@
       },
       onKeyPress(button) {
         this.$emit("onKeyPress", button);
-  
-        /**
-         * If you want to handle the shift and caps lock buttons
-         */
         if (button === "{shift}" || button === "{lock}") this.handleShift();
       },
       handleShift() {
         let currentLayout = this.keyboard.options.layoutName;
         let shiftToggle = currentLayout === "default" ? "shift" : "default";
-  
         this.keyboard.setOptions({
           layoutName: shiftToggle
         });
+      },
+      addTouchEventListeners() {
+        // Ensure this element exists in the DOM
+        this.$nextTick(() => {
+          const keyboardElement = document.querySelector(`.${this.keyboardClass}`);
+          if (keyboardElement) {
+            keyboardElement.addEventListener('touchstart', this.handleTouchStart, false);
+            keyboardElement.addEventListener('touchend', this.handleTouchEnd, false);
+          }
+        });
+      },
+      handleTouchStart(event) {
+        this.$emit("onKeydown", button);
+      },
+      handleTouchEnd(event) {
+        this.$emit("onKeyup", button);
+      },
+      removeTouchEventListeners() {
+        const keyboardElement = document.querySelector(`.${this.keyboardClass}`);
+        if (keyboardElement) {
+          keyboardElement.removeEventListener('touchstart', this.handleTouchStart, false);
+          keyboardElement.removeEventListener('touchend', this.handleTouchEnd, false);
+        }
       }
     },
-    watch: {
-      input(input) {
-        this.keyboard.setInput(input);
-      }
+    beforeDestroy() {
+      this.removeTouchEventListeners();
     }
   };
   </script>
   
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   font-color: black;
   </style>
