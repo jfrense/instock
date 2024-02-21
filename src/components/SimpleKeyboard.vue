@@ -24,7 +24,8 @@
       this.keyboard = new Keyboard(this.keyboardClass, {
         onChange: this.onChange,
         onKeyPress: this.onKeyPress,
-        useTouchEvents: true
+        autoUseTouchEvents: true,
+        preventMouseDownDefault: true
       });
     },
     methods: {

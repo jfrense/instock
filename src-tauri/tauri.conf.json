@@ -19,11 +19,11 @@
     },
     "windows": [
       {
-        "fullscreen": true,
+        "fullscreen": false,
         "resizable": false,
         "title": "instock",
-        "width": 800,
-        "height": 600
+        "width": 1600,
+        "height": 1200
       }
     ],
     "security": {
