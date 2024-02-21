@@ -17,14 +17,21 @@ function onChange(input: any) {
     function onKeyPress(button: any) {
       console.log("button", button);
     }
-
+    function onInputChange(input) {
+      name.value = input.target.value;
+    }
    
 
 </script>
 
 <template>
   <form class="row" @submit.prevent="greet">
-    <input id="greet-input" v-model="name" placeholder="Enter a name..." />
+    <input
+      :value="name"
+      class="input"
+      @input="onInputChange"
+      placeholder="Tap on the virtual keyboard to start"
+    >
     <button type="submit">Greet</button>
 
     
@@ -34,6 +41,6 @@ function onChange(input: any) {
 
   <p>{{ greetMsg }}</p>
 
-  <SimpleKeyboard useTouchEvents @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
+  <SimpleKeyboard  @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
 
 </template>

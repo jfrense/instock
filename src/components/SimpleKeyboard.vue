@@ -4,7 +4,7 @@
   
   <script>
   import Keyboard from "simple-keyboard";
-  import 'simple-keyboard/build/css/index.css';
+  import "simple-keyboard/build/css/index.css";
   
   export default {
     name: "SimpleKeyboard",
@@ -23,9 +23,7 @@
     mounted() {
       this.keyboard = new Keyboard(this.keyboardClass, {
         onChange: this.onChange,
-        onKeyPress: this.onKeyPress,
-        autoUseTouchEvents: true,
-        preventMouseDownDefault: true
+        onKeyPress: this.onKeyPress
       });
     },
     methods: {
@@ -59,6 +57,5 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  font-color: black;
   </style>
   
