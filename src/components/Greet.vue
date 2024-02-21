@@ -17,7 +17,7 @@ function onChange(input: any) {
     function onKeyPress(button: any) {
       console.log("button", button);
     }
-    function onInputChange(input) {
+    function onInputChange(input: any) {
       name.value = input.target.value;
     }
    
