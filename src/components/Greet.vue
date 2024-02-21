@@ -34,6 +34,6 @@ function onChange(input: any) {
 
   <p>{{ greetMsg }}</p>
 
-  <SimpleKeyboard @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
+  <SimpleKeyboard useTouchEvents @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
 
 </template>
