@@ -84,6 +84,12 @@ button {
   outline: none;
 }
 
+input {
+  user-select: initial;
+  -webkit-user-select: initial;
+  cursor: initial;
+}
+
 #greet-input {
   margin-right: 5px;
 }
