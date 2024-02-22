@@ -61,7 +61,7 @@ export default {
     },
     watch: {
         input(input) {
-            this.keyboard.setInput(input);
+            //  this.keyboard.setInput(input);
         }
     }
 };
