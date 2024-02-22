@@ -11,8 +11,7 @@ async function greet() {
 }
 
 function onChange(input: any) {
-    input.preventDefault();
-    input.stopPropogation();
+
     name.value = input;
 }
 
@@ -40,5 +39,5 @@ function onInputChange(input: any) {
 
     <p>{{ greetMsg }}</p>
 
-    <SimpleKeyboard @onChange="onChange" @onKeyPress="onKeyPress" :input="name" />
+    <SimpleKeyboard @onChange="onInputChange" @onKeyPress="onKeyPress" :input="name" />
 </template>
