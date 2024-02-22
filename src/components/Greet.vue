@@ -11,6 +11,8 @@ async function greet() {
 }
 
 function onChange(input: any) {
+    //  input.preventDefault();
+    //input.stopPropogation();
     name.value = input;
 }
 
@@ -18,6 +20,8 @@ function onKeyPress(button: any) {
     console.log("button", button);
 }
 function onInputChange(input: any) {
+    input.preventDefault();
+    input.stopPropogation();
     name.value = input.target.value;
 }
 
