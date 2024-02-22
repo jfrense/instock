@@ -11,8 +11,8 @@ async function greet() {
 }
 
 function onChange(input: any) {
-    //  input.preventDefault();
-    //input.stopPropogation();
+    input.preventDefault();
+    input.stopPropogation();
     name.value = input;
 }
 
