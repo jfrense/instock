@@ -28,7 +28,7 @@ export default {
 
         this.keyboard.setOptions({
             layoutName: "default",
-            autoUseTouchEvents: true,
+            //autoUseTouchEvents: true,
             useMouseEvents: true,
             // disableButtonHold: true,
             //disableCaretPositioning: true,
