@@ -46,7 +46,7 @@ export default {
 
             this.keyboard.setOptions({
                 layoutName: shiftToggle,
-                autoUseTouchEvents: true,
+                useTouchEvents: true,
                 disableButtonHold: true,
                 preventMouseDownDefault: true,
                 preventMouseUpDefault: true,
