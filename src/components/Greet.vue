@@ -6,41 +6,35 @@ const greetMsg = ref("");
 const name = ref("");
 
 async function greet() {
-  // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-  greetMsg.value = await invoke("greet", { name: name.value });
+    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+    greetMsg.value = await invoke("greet", { name: name.value });
 }
 
 function onChange(input: any) {
-      name.value = input;
-    }
+    name.value = input;
+}
 
-    function onKeyPress(button: any) {
-      console.log("button", button);
-    }
-    function onInputChange(input: any) {
-      name.value = input.target.value;
-    }
-   
+function onKeyPress(button: any) {
+    console.log("button", button);
+}
+function onInputChange(input: any) {
+    name.value = input.target.value;
+}
+
 
 </script>
 
 <template>
-  <form class="row" @submit.prevent="greet">
-    <input
-      :value="name"
-      class="input"
-      @input="onInputChange"
-      placeholder="Tap on the virtual keyboard to start"
-    >
-    <button type="submit">Greet</button>
+    <form class="row" @submit.prevent="greet">
+        <input :value="name" class="input" @input="onInputChange" placeholder="Tap on the virtual keyboard to start">
+        <button type="submit">Greet</button>
 
-    
-  </form>
+
+    </form>
 
 
 
-  <p>{{ greetMsg }}</p>
+    <p>{{ greetMsg }}</p>
 
-  <SimpleKeyboard  @onChange="onChange" @onKeyPress="onKeyPress" :input="name"/>
-
+    <SimpleKeyboard @onChange="onChange" @onKeyPress="onKeyPress" :input="name" />
 </template>
