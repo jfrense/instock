@@ -28,12 +28,12 @@ export default {
 
         this.keyboard.setOptions({
             layoutName: "default",
-            //useTouchEvents: true,
+            autoUseTouchEvents: true,
             disableButtonHold: true,
             // preventMouseDownDefault: true,
             // preventMouseUpDefault: true,
-            stopMouseDownPropagation: true,
-            stopMouseUpPropagation: true,
+            //  stopMouseDownPropagation: true,
+            // stopMouseUpPropagation: true,
             debug: true
 
 
