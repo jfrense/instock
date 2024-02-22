@@ -23,7 +23,9 @@ export default {
     mounted() {
         this.keyboard = new Keyboard(this.keyboardClass, {
             onChange: this.onChange,
-            onKeyPress: this.onKeyPress
+            onKeyPress: this.onKeyPress,
+            theme: "hg-theme-default hg-layout-default myTheme",
+
         });
 
         this.keyboard.setOptions({
@@ -71,3 +73,5 @@ export default {
 </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>

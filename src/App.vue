@@ -33,7 +33,7 @@ import Greet from "./components/Greet.vue";
             <a href="https://github.com/rust-lang/rust-analyzer" target="_blank">rust-analyzer</a>
         </p>
 
-        <Greet />
+        <Greet class="static" />
     </div>
 </template>
 

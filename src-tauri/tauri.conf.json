@@ -19,7 +19,7 @@
     },
     "windows": [
       {
-        "fullscreen": true,
+        "fullscreen": false,
         "resizable": false,
         "title": "instock",
         "width": 1280,
