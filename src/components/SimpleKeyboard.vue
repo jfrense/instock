@@ -25,6 +25,18 @@ export default {
             onChange: this.onChange,
             onKeyPress: this.onKeyPress
         });
+
+        this.keyboard.setOptions({
+            layoutName: shiftToggle,
+            useTouchEvents: true,
+            disableButtonHold: true,
+            preventMouseDownDefault: true,
+            preventMouseUpDefault: true,
+            stopMouseDownPropagation: true,
+            stopMouseUpPropagation: true
+
+
+        });
     },
     methods: {
         onChange(input) {
@@ -44,18 +56,7 @@ export default {
             let currentLayout = this.keyboard.options.layoutName;
             let shiftToggle = currentLayout === "default" ? "shift" : "default";
 
-            this.keyboard.setOptions({
-                layoutName: shiftToggle,
-                useTouchEvents: true,
-                disableButtonHold: true,
-                preventMouseDownDefault: true,
-                preventMouseUpDefault: true,
-                stopMouseDownPropagation: true,
-                stopMouseUpPropagation: true
 
-
-
-            });
         }
     },
     watch: {
