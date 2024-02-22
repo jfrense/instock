@@ -29,9 +29,8 @@ function onInputChange(input: any) {
 
 <template>
     <form class="row" @submit.prevent="greet">
-        <!--<input :value="name" class="input" @input="onInputChange" placeholder="Tap on the virtual keyboard to start">
-            -->
-        {{ name }}
+        <input :value="name" class="input" @input="onInputChange" placeholder="Tap on the virtual keyboard to start">
+
         <button type="submit">Greet</button>
 
 
