@@ -30,6 +30,7 @@ export default {
             layoutName: "default",
             autoUseTouchEvents: true,
             disableButtonHold: true,
+            disableCaretPositioning: true,
             // preventMouseDownDefault: true,
             // preventMouseUpDefault: true,
             //  stopMouseDownPropagation: true,
