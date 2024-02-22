@@ -19,8 +19,8 @@ function onKeyPress(button: any) {
     console.log("button", button);
 }
 function onInputChange(input: any) {
-    input.preventDefault();
-    input.stopPropogation();
+    // input.preventDefault();
+    //  input.stopPropogation();
     name.value = input.target.value;
 }
 
