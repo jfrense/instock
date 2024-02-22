@@ -28,6 +28,7 @@ export default {
     },
     methods: {
         onChange(input) {
+            console.log(input)
             this.$emit("onChange", input);
         },
         onKeyPress(button) {
