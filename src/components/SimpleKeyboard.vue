@@ -27,13 +27,14 @@ export default {
         });
 
         this.keyboard.setOptions({
-            layoutName: shiftToggle,
+            layoutName: "default",
             useTouchEvents: true,
             disableButtonHold: true,
             preventMouseDownDefault: true,
             preventMouseUpDefault: true,
             stopMouseDownPropagation: true,
-            stopMouseUpPropagation: true
+            stopMouseUpPropagation: true,
+            debug: true
 
 
         });
@@ -61,7 +62,7 @@ export default {
     },
     watch: {
         input(input) {
-            //  this.keyboard.setInput(input);
+            this.keyboard.setInput(input);
         }
     }
 };
