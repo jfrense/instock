@@ -103,7 +103,7 @@ const people = [
 </script>
 
 <template>
-    <div class="p-8">
+    <div class="px-8 py-2">
         <ul role="list" class="divide-y divide-gray-100 space-y-2 ">
             <li v-for="person in people" :key="person.email" class="flex bg-white px-4 py-5 rounded-lg">
                 <img class="h-12 w-12 flex-none rounded-full bg-gray-50" :src="person.imageUrl" alt="" />

@@ -20,7 +20,7 @@
     "windows": [
       {
         "fullscreen": false,
-        "resizable": false,
+        "resizable": true,
         "title": "instock",
         "width": 1280,
         "height": 720
