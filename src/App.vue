@@ -1,14 +1,13 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import Home from "./pages/Home.vue";
 import Header from "./components/Header.vue";
 </script>
 
 <template>
-    <div class="">
-        <Header class="flex flex-start m-4" />
-        <Home />
+    <div class="space-4">
+        <Header class="flex flex-start p-4" />
+        <router-view></router-view>
     </div>
 </template>
 
