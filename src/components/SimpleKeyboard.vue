@@ -11,21 +11,20 @@ export default {
     props: {
         keyboardClass: {
             default: "simple-keyboard",
-            type: String
+            type: String,
         },
         input: {
-            type: String
-        }
+            type: String,
+        },
     },
     data: () => ({
-        keyboard: null
+        keyboard: null,
     }),
     mounted() {
         this.keyboard = new Keyboard(this.keyboardClass, {
             onChange: this.onChange,
             onKeyPress: this.onKeyPress,
             theme: "hg-theme-default hg-layout-default myTheme",
-
         });
 
         this.keyboard.setOptions({
@@ -38,14 +37,12 @@ export default {
             // preventMouseUpDefault: true,
             //  stopMouseDownPropagation: true,
             // stopMouseUpPropagation: true,
-            debug: true
-
-
+            debug: true,
         });
     },
     methods: {
         onChange(input) {
-            console.log(input)
+            console.log(input);
             this.$emit("onChange", input);
         },
         onKeyPress(button) {
@@ -56,22 +53,20 @@ export default {
              */
             if (button === "{shift}" || button === "{lock}") this.handleShift();
         },
-        onKeyReleased: (button) => console.log("simple-keyboard button released", button),
+        onKeyReleased: (button) =>
+            console.log("simple-keyboard button released", button),
         handleShift() {
             let currentLayout = this.keyboard.options.layoutName;
             let shiftToggle = currentLayout === "default" ? "shift" : "default";
-
-
-        }
+        },
     },
     watch: {
         input(input) {
             this.keyboard.setInput(input);
-        }
-    }
+        },
+    },
 };
 </script>
 
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped></style>
