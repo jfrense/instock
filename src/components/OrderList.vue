@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const people = [
+const orders = [
     {
         name: "Leslie Alexander",
         email: "leslie.alexander@example.com",
@@ -103,21 +103,21 @@ const people = [
     <div class="px-8 py-2">
         <ul role="list" class="divide-y divide-gray-100 space-y-2">
             <li
-                v-for="person in people"
-                :key="person.email"
+                v-for="order in orders"
+                :key="order.email"
                 class="flex bg-white px-4 py-5 rounded-lg"
             >
                 <img
                     class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    :src="person.imageUrl"
+                    :src="order.imageUrl"
                     alt=""
                 />
                 <div class="min-w-0">
                     <p class="text-sm font-semibold leading-6 text-gray-900">
-                        {{ person.name }}
+                        {{ order.name }}
                     </p>
                     <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                        {{ person.email }}
+                        {{ order.email }}
                     </p>
                 </div>
             </li>
